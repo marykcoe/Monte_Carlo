@@ -333,15 +333,15 @@ void Run(sim_box* sim_env_ptr) {
 		}
 		else if (sim_env_ptr->return_test_type() == "critical_point") {
 
-			if (sim_env_ptr->return_mW()) error = abs(0.10396- avg_dens/avg_entries);
+			if (sim_env_ptr->return_mW()) error = abs(0.010396- avg_dens/avg_entries);
 			else error = abs(0.3197 - avg_dens/avg_entries);
 			std::cout<<std::endl<<"-----------------------------------------"<<std::endl;
 			std::cout<<"Critical Point Test Results"<<std::endl;
-			if (sim_env_ptr->return_mW()) std::cout<<"Critical Density = "<<0.322;
+			if (sim_env_ptr->return_mW()) std::cout<<"Critical Density = "<<0.311;
 			else std::cout<<"Critical Density = "<<0.3197;
 			std::cout<<" Average Simulation Density = "<<avg_dens/avg_entries<<std::endl;
 			std::cout<<"Agreement = "<<error<<std::endl;
-			if (sim_env_ptr->return_mW()) error /= 0.10396; 
+			if (sim_env_ptr->return_mW()) error /= 0.010396; 
 			else error /= 0.3197;
 			std::cout<<"Relative Error = "<<abs(error)<<std::endl;
 			std::cout<<"PLEASE NOW PLOT TO CONFIRM DOUBLE PEAKED DISTRIBUTION."<<std::endl;
